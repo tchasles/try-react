@@ -32,7 +32,7 @@ export default function Video(props){
     return (
         <div className="video-container">
             <h4 className="title-tag-video">{video.name}</h4>
-            <ReactPlayer  light={video.poster} controls={true} url={"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"}></ReactPlayer>
+            <ReactPlayer  light={video.poster} controls={true} url={process.env.NEXT_PUBLIC_URL_STREA}></ReactPlayer>
         </div>
     );
 };

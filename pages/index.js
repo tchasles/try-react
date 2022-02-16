@@ -22,7 +22,7 @@ export default function Home() {
         <main className={styles.main + " width-full"}>
           <ClientOnly>
             <div className="video-container">
-              <ReactPlayer  light={"/OTT-Whitelabel-Background.png"} controls={true} url={"https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"}></ReactPlayer>
+              <ReactPlayer  light={"/OTT-Whitelabel-Background.png"} controls={true} url={process.env.NEXT_PUBLIC_URL_STREAM}></ReactPlayer>
             </div>
             <Videos tags={""} similar={false}/>
           </ClientOnly>
