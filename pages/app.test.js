@@ -43,12 +43,3 @@ describe('Testimoniales', () => {
         );
     });
 });
-
-describe('Detail', () => {
-    test('check if video component is correct', async() => {
-        render( Detail({tag:"", id: "3e5bb9ff-298e-4573-b5a9-d18c84a04447"}));
-        await waitForElementToBeRemoved(() => screen.getByText('Loading...')).then(() =>
-            expect(screen.getAllByText("Testimoniales").length > 0).toBeTruthy(),
-        );
-    });
-});

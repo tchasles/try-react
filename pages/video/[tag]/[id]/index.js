@@ -9,6 +9,7 @@ import React from "react";
 import Videos from "../../../../components/Videos";
 import digitalIcon from '../../../../public/OriginsLogo.png'
 import Navigation from "../../../../components/Navigation";
+import client from "../../../api/client";
 
 const Detail = () => {
     const router = useRouter()
@@ -24,12 +25,10 @@ const Detail = () => {
 
             <main className={styles.main + " width-standard"}>
 
-                <div className="container width-standard">
-                    <ClientOnly>
-                        <Video id={id}/>
-                    </ClientOnly>
-                </div>
                 <ClientOnly>
+                <div className="container width-standard">
+                        <Video id={id}/>
+                </div>
                     <Videos tags={tag} limit={4} similar={true}/>
                 </ClientOnly>
             </main>
