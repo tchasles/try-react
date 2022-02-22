@@ -8,8 +8,6 @@ import Image from "next/image";
 import digitalIcon from "../public/OriginsLogo.png";
 
 export default function Home() {
-  const tag = "";
-  console.log(digitalIcon.src);
   return (
       <div className={styles.container}>
         <Head>
