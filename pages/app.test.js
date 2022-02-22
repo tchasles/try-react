@@ -2,18 +2,11 @@ import React from 'react';
 import {
     render,
     screen,
-    waitFor,
     waitForElementToBeRemoved
 } from '@testing-library/react';
 
 import Videos from '../components/Videos';
-import Navigation from '../components/Navigation';
-import Poster from '../components/Poster';
-import Video from '../components/Video';
 import Home from "./index";
-import {wait} from "next/dist/build/output/log";
-import Detail from "./video/[tag]/[id]";
-import VideoTag from "./videotag/[tag]";
 
 
 describe('Videos', () => {

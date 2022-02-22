@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from '../../../styles/Home.module.css'
 
 import { useRouter } from 'next/router'
-import ClientOnly from "../../../components/ClientOnly";
 import Videos from "../../../components/Videos";
 import Navigation from "../../../components/Navigation";
 import React from "react";

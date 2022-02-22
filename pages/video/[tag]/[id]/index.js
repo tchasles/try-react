@@ -4,12 +4,10 @@ import styles from '../../../../styles/Home.module.css'
 
 import { useRouter } from 'next/router'
 import Video from "../../../../components/Video";
-import ClientOnly from "../../../../components/ClientOnly";
 import React from "react";
 import Videos from "../../../../components/Videos";
 import digitalIcon from '../../../../public/OriginsLogo.png'
 import Navigation from "../../../../components/Navigation";
-import client from "../../../api/client";
 import {gql, useQuery} from "@apollo/client";
 
 const Detail = () => {
