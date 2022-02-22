@@ -20,12 +20,8 @@ export default function Home() {
         </Head>
         <Navigation />
         <main className={styles.main + " width-full"}>
-          <ClientOnly>
-            <div className="video-container">
-              <ReactPlayer  light={"/OTT-Whitelabel-Background.png"} controls={true} url={process.env.NEXT_PUBLIC_URL_STREAM}></ReactPlayer>
-            </div>
+            <Video poster={"/OTT-Whitelabel-Background.png"}/>
             <Videos tags={""} similar={false}/>
-          </ClientOnly>
         </main>
 
         <footer className={styles.footer + " width-standard"}>

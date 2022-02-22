@@ -13,6 +13,8 @@ const VideoTag = () => {
     const router = useRouter()
     const { tag } = router.query
 
+
+
     return (
         <div className={styles.container}>
             <Head>
@@ -24,9 +26,7 @@ const VideoTag = () => {
             <Navigation />
 
             <main className={styles.main + " width-standard"}>
-                <ClientOnly>
                     <Videos tags={tag} similar={false}/>
-                </ClientOnly>
             </main>
 
             <footer className={styles.footer + " width-standard"}>

@@ -10,10 +10,34 @@ import Videos from "../../../../components/Videos";
 import digitalIcon from '../../../../public/OriginsLogo.png'
 import Navigation from "../../../../components/Navigation";
 import client from "../../../api/client";
+import {gql, useQuery} from "@apollo/client";
 
 const Detail = () => {
     const router = useRouter()
     const { tag, id } = router.query
+
+    const QUERY = gql`
+    query {
+        video(id: "${id}") {   
+          id
+          name
+          poster
+          url
+        }
+    }
+    `;
+    const {data, loading, error} = useQuery(QUERY);
+    if (loading) {
+        return <h2>Loading...</h2>;
+    }
+
+    if (error) {
+        console.error(error);
+        return null;
+    }
+
+
+    const video = data.video;
 
     return (
         <div className={styles.container}>
@@ -24,13 +48,10 @@ const Detail = () => {
             <Navigation></Navigation>
 
             <main className={styles.main + " width-standard"}>
-
-                <ClientOnly>
                 <div className="container width-standard">
-                        <Video id={id}/>
+                        <Video poster={video.poster} name={video.name}/>
                 </div>
                     <Videos tags={tag} limit={4} similar={true}/>
-                </ClientOnly>
             </main>
 
 

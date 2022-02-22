@@ -1,11 +1,14 @@
 import '../styles/globals.css'
 import client from "./api/client";
 import {ApolloProvider} from "@apollo/client";
+import ClientOnly from "../components/ClientOnly";
 
 function MyApp({ Component, pageProps }) {
   return(
     <ApolloProvider client={client}>
-      <Component {...pageProps} />
+        <ClientOnly>
+            <Component {...pageProps} />
+        </ClientOnly>
     </ApolloProvider>
   )
 }

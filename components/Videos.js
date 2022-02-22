@@ -154,12 +154,12 @@ class Videos extends React.Component {
 
     fetchVideos() {
 
-        var tag = this.props.tags;
+        let tag = this.props.tags;
 
         if (this.props.tags == undefined) {
             tag = "All Videos";
         }
-        var search = tag == "All Videos" ? "" : tag;
+        let search = tag == "All Videos" ? "" : tag;
 
         client.query({
             query: getAllVideos,
@@ -183,7 +183,7 @@ class Videos extends React.Component {
     }
 
     render() {
-        var tag = this.props.tags;
+        let tag = this.props.tags;
 
         if (this.props.tags == undefined) {
             tag = "All Videos";

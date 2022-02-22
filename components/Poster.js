@@ -9,7 +9,7 @@ import playIcon from '../public/OTT-Whitelabel-Play.svg'
 export default function Poster(props){
 
     const video = props.video;
-    var tag = props.tag == "" ? "All Videos" : props.tag;
+    let tag = props.tag == "" ? "All Videos" : props.tag;
     return (
         <a key={video.id} className={styles.card} href={'/video/'+ tag +'/' + video.id}>
             <div className="poster">
